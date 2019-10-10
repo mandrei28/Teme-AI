@@ -1,0 +1,75 @@
+Marcu Andrei, Problema nr. 4
+
+------------------------------------------------------------------------------------------------------------------
+
+
+ Programul va testa mai multe euristici intr-un numar limitat de iteratii dat de mine deoarece unele euristici rezolva mult mai rapid problema
+
+ Exista insa si cazuri care nu sunt rezolvabile cu niciuna din euristici in numarul de iteratii dat de mine, asadar nu va afisa o solutie
+
+ Numarul de iteratii este determinat in functie de dimensiunea matricii, formula fiind matrix_size^2 * 1000 iteratii
+
+ Starea initiala este generata random, iar starea finala este generata in functie de starea initiala
+
+INPUT:
+Matrix_size = 3
+Initial:  (3, 2, 1, 0, 0, 0, 0, 0, 0)
+Goal:     (0, 0, 0, 0, 0, 0, 1, 2, 3)
+
+OUTPUT:
+Rezolvare folosind euristica Diagonal Distance adaptata pentru problema nostra:
+
+3 2 1
+0 0 0
+0 0 0
+
+3 2 0
+0 0 1
+0 0 0
+
+3 0 0
+0 2 1
+0 0 0
+
+0 0 0
+3 2 1
+0 0 0
+
+0 0 0
+3 2 0
+0 0 1
+
+0 0 0
+3 0 2
+0 0 1
+
+0 0 0
+3 0 2
+0 1 0
+
+0 0 0
+3 2 0
+0 1 0
+
+0 0 0
+0 2 3
+0 1 0
+
+0 0 0
+0 2 3
+1 0 0
+
+0 0 0
+0 0 3
+1 2 0
+
+0 0 0
+0 0 0
+1 2 3
+[<Node (3, 2, 1, 0, 0, 0, 0, 0, 0)>, <Node (3, 2, 0, 0, 0, 1, 0, 0, 0)>, <Node (3, 0, 0, 0, 2, 1, 0, 0, 0)>, <Node (0, 0, 0, 3, 2, 1, 0, 0, 0)>, <Node (0, 0, 0, 3, 2, 0, 0, 0, 1)>, <Node (0, 0, 0, 3, 0, 2, 0, 0, 1)>, <Node (0, 0, 0, 3, 0, 2, 0, 1, 0)>, <Node (0, 0, 0, 3, 2, 0, 0, 1, 0)>, <Node (0, 0, 0, 0, 2, 3, 0, 1, 0)>, <Node (0, 0, 0, 0, 2, 3, 1, 0, 0)>, <Node (0, 0, 0, 0, 0, 3, 1, 2, 0)>, <Node (0, 0, 0, 0, 0, 0, 1, 2, 3)>]
+
+
+Realizat in : 0.0500483512878418
+
+
+Realizat in : 73 iteratii
